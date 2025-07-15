@@ -1,10 +1,18 @@
 import React from 'react'
 
-const Main = () => {
+import Header from './Header'
+import Footer from './Footer'
+
+const Main = (props) => {
   return (
-    <main id='main' role='main'>
-      Main
-    </main>
+    <>
+      <Header />
+      <main id='main' role='main'>
+        {props.children}
+        {/* 데이터 전달의 역할 */}
+      </main>
+      <Footer />
+    </>
   )
 }
 
